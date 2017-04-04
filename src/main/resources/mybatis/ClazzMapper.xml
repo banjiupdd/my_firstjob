@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bd.repository.BdClassMapper" >
+    <resultMap id="BaseResultMap" type="com.example.domain.Clazz" >
+        <id column="clazz_id" property="clazzId" jdbcType="INTEGER" />
+        <result column="clazz_name" property="clazzName" jdbcType="VARCHAR" />
+    </resultMap>
+    <sql id="Base_Column_List" >
+        clazz_id, clazz_name
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+        select
+        <include refid="Base_Column_List" />
+        from bd_class
+        where clazz_id =#{clazzId,jdbcType=INTEGER}
+    </select>
+</mapper>
