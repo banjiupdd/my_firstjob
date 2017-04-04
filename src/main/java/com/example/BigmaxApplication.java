@@ -1,11 +1,15 @@
-remote package com.example;
+package com.example;
 
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BigmaxApplication {
-
+@MapperScan(basePackages = "com.example.repository")
+public class gitBigmaxApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BigmaxApplication.class, args);
 	}

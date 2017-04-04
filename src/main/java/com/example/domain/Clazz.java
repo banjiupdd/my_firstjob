@@ -1,26 +1,28 @@
 package com.example.domain;
 
+import java.io.Serializable;
+
 /**
  * Created by Administrator on 2017/4/4 0004.
  */
-public class Clazz {
+public class Clazz implements Serializable {
     //clazz_id
-    private Integer clazzId;
-    private String clazzName;
+    private Integer classId;
+    private String className;
 
-    public Integer getClazzId() {
-        return clazzId;
+    public String getClassName() {
+        return className;
     }
 
-    public void setClazzId(Integer clazzId) {
-        this.clazzId = clazzId;
+    public void setClassName(String className) {
+        this.className = className;
     }
 
-    public String getClazzName() {
-        return clazzName;
+    public Integer getClassId() {
+        return classId;
     }
 
-    public void setClazzName(String clazzName) {
-        this.clazzName = clazzName;
+    public void setClassId(Integer classId) {
+        this.classId = classId;
     }
 }
