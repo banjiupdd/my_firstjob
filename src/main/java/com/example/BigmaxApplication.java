@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan(basePackages = "com.example.repository")
-public class gitBigmaxApplication {
+public class BigmaxApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BigmaxApplication.class, args);
 	}
